@@ -32,7 +32,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobileOpen: false
+      mobileOpen: false,
+      currentProgress:0
     };
     this.resizeFunction = this.resizeFunction.bind(this);
   }
@@ -49,7 +50,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     //if (navigator.platform.indexOf("Win") > -1) {
-     // const ps = new PerfectScrollbar(this.refs.mainPanel);
+    // const ps = new PerfectScrollbar(this.refs.mainPanel);
     //}
     window.addEventListener("resize", this.resizeFunction);
   }
@@ -89,9 +90,12 @@ class App extends React.Component {
               <div className={classes.container}>{switchRoutes}</div>
             </div>
           ) : (
-            <div className={classes.map}>{switchRoutes}</div>
-          )}
+              <div className={classes.map}>{switchRoutes}</div>
+            )}
           {this.getRoute() ? <Footer /> : null}
+        </div>
+        <div className={classes.rightContainer}>
+          This is rigth container
         </div>
       </div>
     );

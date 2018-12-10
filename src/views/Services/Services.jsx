@@ -27,16 +27,13 @@ class Services extends Component {
                  <GridContainer>                     
                     <GridItem xs={12} sm={6} md={3}>
                             <Card>
-                                <CardHeader color="warning" stats icon>
+                                <CardHeader color="success">
                                     {/* <CardIcon color="warning">
                                         <Icon>
                                             <Store />
                                         </Icon>
                                     </CardIcon> */}
                                     <p >Used Space</p>
-                                    <h3 className={classes.cardTitle}>
-                                    49/50 <small>GB</small>
-                                    </h3>
                                 </CardHeader>
                                 <CardBody>
                                     THis is card Body

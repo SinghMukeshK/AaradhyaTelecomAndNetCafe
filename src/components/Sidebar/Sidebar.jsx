@@ -13,7 +13,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
 import HeaderLinks from "../Header/HeaderLinks.jsx";
-
 import sidebarStyle from "../../assets/jss/components/sidebarStyle.jsx";
 
 const Sidebar = ({ ...props }) => {

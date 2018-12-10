@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Carrousel from '../../components/Carrousel/Carrousel.jsx';
 
 class Tickets extends Component {
     render () {

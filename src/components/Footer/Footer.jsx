@@ -6,14 +6,15 @@ import ListItem from "@material-ui/core/ListItem";
 import List from "@material-ui/core/List";
 // core components
 import footerStyle from '../../assets/jss/components/footerStyle.jsx';
+import Carrousel from '../../components/Carrousel/Carrousel.jsx';
 
 function Footer({ ...props }) {
   const { classes } = props;
   return (
-    <footer className={classes.footer}>
-      <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
+    // <footer className={classes.footer}>
+    //   <div className={classes.container}>
+    //     <div className={classes.left}>
+          /* <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a href="/" className={classes.block}>
                 Home
@@ -29,21 +30,16 @@ function Footer({ ...props }) {
                 Portfolio
               </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={classes.block}>
-                Blog
-              </a>
-            </ListItem>
-          </List>
-        </div>
-        <p className={classes.right}>
-          <span>
-            &copy; {1900 + new Date().getYear()}{" "}
-            
-          </span>
-        </p>
-      </div>
-    </footer>
+            <ListItem className={classes.inlineBlock}> */
+              <Carrousel/>
+            /* </ListItem>
+          </List> */
+      //   </div>
+      //   <p className={classes.right}>
+         
+      //   </p> 
+      // </div>
+    //</footer>
   );
 }
 
