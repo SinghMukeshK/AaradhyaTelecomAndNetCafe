@@ -3,10 +3,12 @@ import styles from '@material-ui/core/styles'
 
 
 import withStyles from "@material-ui/core/styles/withStyles";
+
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import Icon from "@material-ui/core/Icon";
-
 import Store from "@material-ui/icons/Store";
-
 import Storea from "@material-ui/icons/";
 
 import Card from '../../components/Card/Card.jsx'
@@ -18,46 +20,49 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 
 import applicationStyle from '../../assets/jss/components/dashboardStyle.jsx';
+import Slide from '@material-ui/core/Slide';
 
 class Services extends Component {
-    render () {
+    render() {
         const { classes } = this.props;
+        this.state = {
+            loading: true
+        }
+
+        setTimeout(() => {
+            console.log('loaing')
+            console.log(this.state.loading)
+            this.setState({
+                loading: false
+            })
+        }, 2000)
+        let loader;
+        if (this.state.loading)
+            loader = <LinearProgress color="secondary" variant="query" />
+        else loader = <p>Load complete</p>
         return (
             <div>
-                 <GridContainer>                     
-                    <GridItem xs={12} sm={6} md={3}>
+                <GridContainer>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
                             <Card>
-                                <CardHeader color="success">
-                                    {/* <CardIcon color="warning">
-                                        <Icon>
-                                            <Store />
-                                        </Icon>
-                                    </CardIcon> */}
-                                    <p >Used Space</p>
-                                </CardHeader>
+                                <CardHeader color="warning">This is card header</CardHeader>
                                 <CardBody>
-                                    THis is card Body
-                                 </CardBody>   
-                                <CardFooter stats>
-                                    <div className={classes.stats}>
-                                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                                           Rail Reservation
-                                        </a>
-                                    </div>
+                                    {loader}
+                                </CardBody>
+                                <CardFooter>
+
                                 </CardFooter>
                             </Card>
-                    </GridItem>
-                    <GridItem xs={12} sm={6} md={4}>
+                        </GridItem>
+                    </Slide>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
                             <Card>
-                                <CardHeader color="warning" stats icon>
-                                    <CardIcon color="warning">
-                                    {/* <Icon>content_copy</Icon> */}
-                                    </CardIcon>
-                                    <p >Used Space</p>
-                                    <h3 className={classes.cardTitle}>
-                                    49/50 <small>GB</small>
-                                    </h3>
-                                </CardHeader>
+                                <CardHeader color="success">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                </CardBody>
                                 <CardFooter stats>
                                     <div className={classes.stats}>
                                         <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -66,29 +71,95 @@ class Services extends Component {
                                     </div>
                                 </CardFooter>
                             </Card>
-                    </GridItem>
+                        </GridItem>
+                    </Slide>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
+                            <Card>
+                                <CardHeader color="info">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                 </CardBody>
+                                <CardFooter stats>
+                                    <div className={classes.stats}>
+                                        <a href="/tickets">
+                                            Rail Reservation
+                                        </a>
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                        </GridItem>
+                    </Slide>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
+                            <Card>
+                                <CardHeader color="rose">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                 </CardBody>
+                                <CardFooter stats>
+                                    <div className={classes.stats}>
+                                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                                            Rail Reservation
+                                        </a>
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                        </GridItem>
+                    </Slide>
                 </GridContainer>
-                <GridContainer>                     
-                    <GridItem xs={12} sm={6} md={3}>
+                <GridContainer>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
                             <Card>
-                                <CardHeader color="warning" stats icon>
-                                    <CardIcon color="warning">
-                                    {/* <Icon>content_copy</Icon> */}
-                                    </CardIcon>
-                                    <p >Used Space</p>
-                                    <h3 className={classes.cardTitle}>
-                                    49/50 <small>GB</small>
-                                    </h3>
-                                </CardHeader>
+                                <CardHeader color="primary">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                 </CardBody>
                                 <CardFooter stats>
                                     <div className={classes.stats}>
                                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                                            Get more space
+                                            Rail Reservation
                                         </a>
                                     </div>
                                 </CardFooter>
                             </Card>
-                    </GridItem>
+                        </GridItem>
+                    </Slide>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
+                            <Card>
+                                <CardHeader color="warning">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                 </CardBody>
+                                <CardFooter stats>
+                                    <div className={classes.stats}>
+                                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                                            Rail Reservation
+                                        </a>
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                        </GridItem>
+                    </Slide>
+                    <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+                        <GridItem xs={12} sm={6} md={3}>
+                            <Card>
+                                <CardHeader color="warning">This is card header</CardHeader>
+                                <CardBody>
+                                    This is card Body
+                                 </CardBody>
+                                <CardFooter stats>
+                                    <div className={classes.stats}>
+                                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                                            Rail Reservation
+                                        </a>
+                                    </div>
+                                </CardFooter>
+                            </Card>
+                        </GridItem>
+                    </Slide>
                 </GridContainer>
             </div>
         )

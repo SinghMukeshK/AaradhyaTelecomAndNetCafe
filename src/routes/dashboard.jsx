@@ -8,6 +8,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
+import Home from '../views/Home/Home.jsx';
 import Tickets from '../views/Tickets/Tickets.jsx';
 import Events from '../views/Events/Events.jsx';
 import AboutUs from '../views/AboutUs/AboutUs.jsx';
@@ -16,35 +17,40 @@ import Services from '../views/Services/Services.jsx';
 
 const dashboardRoutes = [
   {
+    path: "/Home",
+    sidebarName: "Home",
+    navbarName: "Home",
+    icon: Notifications,
+    component: Home
+  }, {
     path: "/services",
     sidebarName: "Services",
     navbarName: "Our services",
-    icon: Dashboard,
+    icon: LibraryBooks,
     component: Services
   },
   {
     path: "/tickets",
     sidebarName: "Tickets",
     navbarName: "Tickets",
-    icon: Person,
+    icon: BubbleChart,
     component: Tickets
   },
-  
+
   {
     path: "/aboutUs",
     sidebarName: "About Us",
     navbarName: "About Us",
-    icon: Person,
+    icon: Unarchive,
     component: AboutUs
   },
   {
     path: "/contactUs",
     sidebarName: "Contact Us",
     navbarName: "Contact Us",
-    icon: Person,
+    icon: Notifications,
     component: ContactUs
-  },
-  { redirect: true, path: "/", to: "/events", navbarName: "Redirect" }
+  }, { redirect: true, path: "/", to: "/Home", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;

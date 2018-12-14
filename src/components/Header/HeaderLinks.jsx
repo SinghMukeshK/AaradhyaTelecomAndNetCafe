@@ -112,38 +112,74 @@ class HeaderLinks extends React.Component {
               >
                 <Paper>
                   <ClickAwayListener onClickAway={this.handleClose}>
-                    <MenuList role="menu">
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Mike John responded to your email
+                    <div className={{ flex: '1' }}>
+                      <MenuList role="">
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Mike John responded to your email
                       </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        You have 5 new tasks
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          You have 5 new tasks
                       </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        You're now friend with Andrew
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          You're now friend with Andrew
                       </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Another Notification
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Another Notification
                       </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Another One
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Another One
                       </MenuItem>
-                    </MenuList>
+                      </MenuList>
+                    </div>
+                    <div className={{ flexBasis: '33.33%' }}>
+                      <MenuList role="">
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Mike John responded to your email
+                      </MenuItem>
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          You have 5 new tasks
+                      </MenuItem>
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          You're now friend with Andrew
+                      </MenuItem>
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Another Notification
+                      </MenuItem>
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className={classes.dropdownItem}
+                        >
+                          Another One
+                      </MenuItem>
+                      </MenuList>
+                    </div>
                   </ClickAwayListener>
                 </Paper>
               </Grow>

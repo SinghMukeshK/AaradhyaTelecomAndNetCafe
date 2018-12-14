@@ -32,7 +32,7 @@ function Card({ ...props }) {
     [classes.cardChart]: chart,
     [className]: className !== undefined
   });
-  console.log('cardClasses', cardClasses)
+  
   return (
     <div className={cardClasses} {...rest}>
       {children}

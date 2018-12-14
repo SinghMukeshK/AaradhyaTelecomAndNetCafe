@@ -53,7 +53,6 @@ class DetailedExpansionPanel extends React.Component {
     }
     render() {
         const { classes, route } = this.props;
-        console.log(route)
         let panel;
         if (route) {
             return (
@@ -73,9 +72,10 @@ class DetailedExpansionPanel extends React.Component {
                             <Typography className={classes.secondaryHeading}>Actual Departure : {route.actdep}</Typography>
                         </div>
                     </ExpansionPanelSummary>
-                  
+
                     <ExpansionPanelDetails className={classes.details}>
-                        <div className={classes.column} />
+                        <div className={classes.column}>
+                            <Chip label="Barbados" className={classes.chip} onDelete={() => { }} /></div>
                         <div className={classes.column}>
                             <Chip label="Barbados" className={classes.chip} onDelete={() => { }} />
                         </div>

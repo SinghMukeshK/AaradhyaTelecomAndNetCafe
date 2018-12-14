@@ -18,6 +18,7 @@ import dashboardStyle from "../../assets/jss/components/dashboardStyle.jsx";
 
 import image from "../../assets/img/train-plane.jpg";
 
+import banner_three from '../../assets/img/cover.jpeg';
 const switchRoutes = (
   <Switch>
     {dashboardRoutes.map((prop, key) => {
@@ -33,7 +34,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       mobileOpen: false,
-      currentProgress:0
+      currentProgress: 0
     };
     this.resizeFunction = this.resizeFunction.bind(this);
   }
@@ -71,8 +72,8 @@ class App extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={dashboardRoutes}
-          logoText={"Aaradhya Telecom"}
-          image={image}
+          logoText={"Sample React Application"}
+          image={banner_three}
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}
           color="blue"
