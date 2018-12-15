@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 
 import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
+import { FormHelperText } from '@material-ui/core';
 
 const ShowBlog = ({ ...props }) => {
     const { blog, next } = props;
@@ -28,7 +29,11 @@ const ShowBlog = ({ ...props }) => {
                 <Typography>
                     <h1>{blog.title}</h1>
                     <i>Posted by {blog.postedBy} on {blog.postedOn}  </i>
-                    <p>{blog.description}</p>
+                    <p style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        wordWrap: "break-word"
+                    }}>{blog.description}</p>
 
                     <IconButton onClick={this.like}>
                         <Icon color="primary">thumb_up</Icon>
