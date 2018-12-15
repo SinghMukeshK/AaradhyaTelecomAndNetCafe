@@ -15,6 +15,7 @@ import AboutUs from '../views/AboutUs/AboutUs.jsx';
 import ContactUs from '../views/ContactUs/ContactUs.jsx';
 import Services from '../views/Services/Services.jsx';
 import News from '../views/Services/News.jsx';
+import Blogs from '../views/Blogs/Blogs.jsx';
 
 const dashboardRoutes = [
   {
@@ -44,6 +45,14 @@ const dashboardRoutes = [
     navbarName: "About Us",
     icon: Unarchive,
     component: AboutUs
+  }
+  ,
+  {
+    path: "/blogs",
+    sidebarName: "Blogs",
+    navbarName: "",
+    icon: Unarchive,
+    component: Blogs
   },
   {
     path: "/news",
