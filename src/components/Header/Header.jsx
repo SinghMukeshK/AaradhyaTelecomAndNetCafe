@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-import { NavLink } from "react-router-dom";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
+// import { NavLink } from "react-router-dom";
+// import ListItem from "@material-ui/core/ListItem";
+// import ListItemIcon from "@material-ui/core/ListItemIcon";
+// import ListItemText from "@material-ui/core/ListItemText";
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -13,8 +13,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Hidden from "@material-ui/core/Hidden";
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+// import MenuItem from '@material-ui/core/MenuItem';
+// import Menu from '@material-ui/core/Menu';
 
 // @material-ui/icons
 import MenuIcon from '@material-ui/icons/Menu';
@@ -24,7 +24,7 @@ import HeaderLinks from "./HeaderLinks.jsx";
 import Button from "../CustomButtons/Button.jsx";
 
 import headerStyle from "../../assets/jss/components/headerStyle.jsx";
-import Carrousel from '../../components/Carrousel/Carrousel.jsx';
+//import Carrousel from '../../components/Carrousel/Carrousel.jsx';
 
 function Header({ ...props }) {
   function makeBrand() {

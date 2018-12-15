@@ -13,9 +13,9 @@ import Poppers from "@material-ui/core/Popper";
 import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
 import Dashboard from "@material-ui/icons/Dashboard";
-import Search from "@material-ui/icons/Search";
-// core components
-import CustomInput from "../../components/CustomInput/CustomInput.jsx";
+// import Search from "@material-ui/icons/Search";
+// // core components
+// import CustomInput from "../../components/CustomInput/CustomInput.jsx";
 import Button from "../CustomButtons/Button.jsx";
 
 import headerLinksStyle from '../../assets/jss/components/headerLinksStyle.jsx';
@@ -57,7 +57,7 @@ class HeaderLinks extends React.Component {
             <Search />
           </Button>
         </div> */}
-        <Button
+        {/* <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
@@ -68,9 +68,9 @@ class HeaderLinks extends React.Component {
           <Hidden mdUp implementation="css">
             <p className={classes.linkText}>Dashboard</p>
           </Hidden>
-        </Button>
+        </Button> */}
         <div className={classes.manager}>
-          <Button
+          {/* <Button
             buttonRef={node => {
               this.anchorEl = node;
             }}
@@ -81,16 +81,16 @@ class HeaderLinks extends React.Component {
             aria-haspopup="true"
             onClick={this.handleToggle}
             className={classes.buttonLink}
-          >
-            <Notifications className={classes.icons} />
+          > */}
+            {/* <Notifications className={classes.icons} />
             <span className={classes.notifications}>5</span>
             <Hidden mdUp implementation="css">
               <p onClick={this.handleClick} className={classes.linkText}>
                 Notification
               </p>
-            </Hidden>
-          </Button>
-          <Poppers
+            </Hidden> */}
+          {/* </Button> */}
+          {/* <Poppers
             open={open}
             anchorEl={this.anchorEl}
             transition
@@ -184,9 +184,9 @@ class HeaderLinks extends React.Component {
                 </Paper>
               </Grow>
             )}
-          </Poppers>
+          </Poppers> */}
         </div>
-        <Button
+        {/* <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
@@ -197,7 +197,7 @@ class HeaderLinks extends React.Component {
           <Hidden mdUp implementation="css">
             <p className={classes.linkText}>Profile</p>
           </Hidden>
-        </Button>
+        </Button> */}
       </div>
     );
   }

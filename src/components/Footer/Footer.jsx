@@ -11,6 +11,7 @@ import Carrousel from '../../components/Carrousel/Carrousel.jsx';
 function Footer({ ...props }) {
   const { classes } = props;
   return (
+    <div></div>
     // <footer className={classes.footer}>
     //   <div className={classes.container}>
     //     <div className={classes.left}>
@@ -31,7 +32,7 @@ function Footer({ ...props }) {
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}> */
-              <Carrousel/>
+              // <Carrousel/>
             /* </ListItem>
           </List> */
       //   </div>

@@ -8,7 +8,25 @@ import GridContainer from "../../components/Grid/GridContainer.jsx";
 
 import TextField from '@material-ui/core/TextField';
 
+import Snackbar from '../../components/Snackbar/Snackbar';
+import SnackbarContent from '../../components/Snackbar/SnackbarContent'
+
 class ContactUs extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showSnackBar: false
+        }
+    }
+
+    submitMessage = () => {
+        console.log('sent')
+        this.setState(
+            {
+                showSnackBar: true
+            }
+        )
+    }
     render() {
         return (
             <GridContainer>
@@ -42,7 +60,15 @@ class ContactUs extends Component {
                     />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={12}>
-                    <Button variant="contained" size="small" color="primary" >Submit</Button>
+                    <Button variant="contained" size="small" color="primary" onClick={this.submitMessage}>Submit</Button>
+                    <Snackbar
+                        place="br"
+                        color="info"
+                        message="Thanks for writing to us! your query will be answered shortly"
+                        open={this.state.showSnackBar}
+                        close={!this.state.showSnackBar}
+                        
+                    />
                 </GridItem>
             </GridContainer>
         )

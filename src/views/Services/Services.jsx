@@ -5,12 +5,14 @@ import styles from '@material-ui/core/styles'
 import withStyles from "@material-ui/core/styles/withStyles";
 
 import LinearProgress from '@material-ui/core/LinearProgress';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Icon from "@material-ui/core/Icon";
-import Store from "@material-ui/icons/Store";
-import Storea from "@material-ui/icons/";
+// import Paper from '@material-ui/core/Paper';
+// import Typography from '@material-ui/core/Typography';
+// import Icon from "@material-ui/core/Icon";
+// import Store from "@material-ui/icons/Store";
+// import Storea from "@material-ui/icons/";
 
+
+import Slide from '@material-ui/core/Slide';
 import Card from '../../components/Card/Card.jsx'
 import CardHeader from '../../components/Card/CardHeader.jsx'
 import CardFooter from '../../components/Card/CardFooter.jsx'
@@ -20,7 +22,6 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 
 import applicationStyle from '../../assets/jss/components/dashboardStyle.jsx';
-import Slide from '@material-ui/core/Slide';
 
 class Services extends Component {
     render() {

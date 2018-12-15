@@ -72,7 +72,7 @@ class App extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={dashboardRoutes}
-          logoText={"Sample React Application"}
+          logoText={"Aaradhya Telecom"}
           image={banner_three}
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}

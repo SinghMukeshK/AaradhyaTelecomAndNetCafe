@@ -14,14 +14,15 @@ import Events from '../views/Events/Events.jsx';
 import AboutUs from '../views/AboutUs/AboutUs.jsx';
 import ContactUs from '../views/ContactUs/ContactUs.jsx';
 import Services from '../views/Services/Services.jsx';
+import News from '../views/Services/News.jsx';
 
 const dashboardRoutes = [
   {
     path: "/Home",
     sidebarName: "Home",
-    navbarName: "Home",
+    navbarName: "",
     icon: Notifications,
-    component: Home
+    component: News
   }, {
     path: "/services",
     sidebarName: "Services",
@@ -43,6 +44,13 @@ const dashboardRoutes = [
     navbarName: "About Us",
     icon: Unarchive,
     component: AboutUs
+  },
+  {
+    path: "/news",
+    sidebarName: "News",
+    navbarName: "",
+    icon: Unarchive,
+    component: News
   },
   {
     path: "/contactUs",
