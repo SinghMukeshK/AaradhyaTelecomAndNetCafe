@@ -51,6 +51,9 @@ export default class Blogs extends Component {
         })
         console.log('_articles', _articles)
     }
+    componentDidMount() {
+        this.handleCategoryClick('Technology');
+    }
     render() {
         let articles;
         if (this.state.totalArticles.length > 0) {
@@ -65,7 +68,7 @@ export default class Blogs extends Component {
                 )
             })
         } else {
-            articles = blogs.map((element, key) => {
+            articles = this.state.totalArticles.map((element, key) => {
                 return (
                     <ShowBlog
                         blog={element}
@@ -79,11 +82,10 @@ export default class Blogs extends Component {
         return (
             <Typography>
                 <GridContainer>
-                    <br/>
-                    <GridItem xs={12} sm={12} md={12}>
+                    <GridItem xs={12} sm={12} md={12} style={{ marginTop: "15px" }}>
                         <BlogCategories handleCategoryClick={this.handleCategoryClick} />
                     </GridItem>
-                     <GridItem xs={12} sm={12} md={12}>
+                    <GridItem xs={12} sm={12} md={12}>
                         {articles}
                     </GridItem>
                     {/*<GridItem xs={12} sm={3} md={3}>

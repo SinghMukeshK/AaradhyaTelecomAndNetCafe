@@ -14,7 +14,7 @@ const BlogComponent = ({ ...props }) => {
             <Card>
                 <CardBody>
                     <h1>  {blog.title}</h1>
-                        <i>Posted by {blog.postedBy} on {blog.postedOn}  </i><br/>
+                    <i>Posted by {blog.postedBy} on {blog.postedOn}  </i><br />
                     {blog.description}
                 </CardBody>
                 <CardFooter stats>

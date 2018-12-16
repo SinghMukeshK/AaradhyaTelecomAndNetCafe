@@ -11,26 +11,55 @@ import Divider from '@material-ui/core/Divider';
 
 import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
-import { FormHelperText} from '@material-ui/core';
+import { FormHelperText } from '@material-ui/core';
 
 class ShowBlog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
-            description: ''
+            isReading: false,
+            buttonText: 'Show more..',
+            detailDescription: this.props.blog.description
         }
     }
 
-    handleClick = (language, articleId) => {
-        let result = this.props.blog.languages.filter(element => { return element.language == language })
+    // handleClick = (language, articleId) => {
+    //     let result = this.props.blog.languages.filter(element => { return element.language == language })
+    // }
+    changeLanguage = (language) => {
+        this.props.blog.languages.filter(article => {
+            if (article.language == language) {
+                this.setState({
+                    detailDescription: article.description
+                })
+            }
+        })
     }
-    next = () => {
 
+    showHideArticle = () => {
+        if (this.state.isReading)
+            this.setState({
+                isReading: !this.state.isReading,
+                buttonText: 'Show less..',
+                detailDescription: this.props.blog.detailDescription
+            })
+        else
+            this.setState({
+                isReading: !this.state.isReading,
+                buttonText: 'Show More..',
+                detailDescription: this.props.blog.description
+            })
     }
     render() {
         const { blog } = this.props;
-        let comments; let languages;
+        let comments; let languages; let detailDescription;
+
+        // if (this.state.isReading) {
+        //     this.setState({
+        //         detailDescription: blog.detailDescription
+        //     })
+        // } else detailDescription = blog.description
+
         if (blog.comments) {
             comments = blog.comments.map((comment, key) => {
                 return <p>{comment.message}</p>
@@ -42,7 +71,7 @@ class ShowBlog extends React.Component {
                     style={{ float: "right", margin: "2px" }}
                     label={element.language}
                     color="primary"
-                    onClick={() => this.props.changeLanguage(element.language, blog.id)}
+                    onClick={() => this.changeLanguage(element.language)}
                     variant="outlined"
                 />
             })
@@ -65,21 +94,23 @@ class ShowBlog extends React.Component {
                             display: "flex",
                             justifyContent: "center",
                             wordWrap: "break-word"
-                        }}>{blog.description}</div>
+                        }}>{this.state.detailDescription}</div>
 
-                        <Button variant="outlined" size="small" color="primary" >Previous</Button>
+                        {/* <Button variant="outlined" size="small" color="primary" >Previous</Button> */}
+
                         <Button
-                            variant="outlined"
+                            variant="flat"
                             size="small"
                             color="primary"
                             style={{ float: "right" }}
-                            onClick={this.next} >Next</Button>
-                        <IconButton onClick={this.like}>
+                            onClick={this.showHideArticle}>{this.state.buttonText}</Button>
+
+                        {/* <IconButton onClick={this.like}>
                             <Icon color="primary">thumb_up</Icon>
                         </IconButton>
                         <IconButton onClick={this.like}>
                             <Icon color="primary">thumb_down</Icon>
-                        </IconButton>
+                        </IconButton> */}
                         {/* {comments}
                         <TextField
                             id="standard-full-width"
