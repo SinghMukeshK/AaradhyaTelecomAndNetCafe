@@ -9,6 +9,7 @@ import Card from '../../components/Card/Card.jsx'
 import CardHeader from '../../components/Card/CardHeader.jsx'
 import CardFooter from '../../components/Card/CardFooter.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
+import Blogs from '../../views/Blogs/Blogs';
 
 export default class Home extends Component {
     constructor(props) {
@@ -26,19 +27,13 @@ export default class Home extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{
+                backgroundColor: ""
+            }}>
                 <GridContainer>
                     <Slide direction="up" in={true} mountOnEnter unmountOnExit onEntered={() => this.onSlideEntered} >
-                        <GridItem xs={12} sm={12} md={12}>
-                            <Card>
-                                <CardHeader color="warning">This is card header</CardHeader>
-                                <CardBody>
-                                    {this.state.welcomeMessage}
-                                </CardBody>
-                                <CardFooter>
-
-                                </CardFooter>
-                            </Card>
+                        <GridItem xs={12} sm={12} md={12} style={{ marginTop: "10px" }}>
+                            <Blogs />
                         </GridItem>
                     </Slide>
                 </GridContainer>

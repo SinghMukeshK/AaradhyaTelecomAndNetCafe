@@ -70,15 +70,15 @@ class App extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div className={classes.wrapper}>
-        <Sidebar
+        {/* <Sidebar
           routes={dashboardRoutes}
-          logoText={"Aaradhya Telecom"}
+          // logoText={"Aaradhya Telecom"}
           image={banner_three}
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-        />
+        /> */}
         <div className={classes.mainPanel} ref="mainPanel">
           <Header
             routes={dashboardRoutes}
@@ -94,9 +94,6 @@ class App extends React.Component {
               <div className={classes.map}>{switchRoutes}</div>
             )}
           {this.getRoute() ? <Footer /> : null}
-        </div>
-        <div className={classes.rightContainer}>
-          This is rigth container
         </div>
       </div>
     );

@@ -8,17 +8,19 @@ import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
-
+import PersonIcon from "@material-ui/icons/Person";
 import GridItem from "../../components/Grid/GridItem.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 import { FormHelperText } from '@material-ui/core';
+
+import AuthContext from '../../context/AuthContext';
 
 class ShowBlog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             isReading: false,
-            buttonText: 'Show more..',
+            buttonText: 'More..',
             detailDescription: this.props.blog.description
         }
     }
@@ -40,15 +42,19 @@ class ShowBlog extends React.Component {
         if (this.state.isReading)
             this.setState({
                 isReading: !this.state.isReading,
-                buttonText: 'Show less..',
+                buttonText: 'Less..',
                 detailDescription: this.props.blog.detailDescription
             })
         else
             this.setState({
                 isReading: !this.state.isReading,
-                buttonText: 'Show More..',
+                buttonText: 'More..',
                 detailDescription: this.props.blog.description
             })
+    }
+
+    handleLike = (context) => {
+        console.log(context)
     }
     render() {
         const { blog } = this.props;
@@ -77,41 +83,49 @@ class ShowBlog extends React.Component {
             })
         }
         return (
-            <Typography>
-                <GridContainer>
-                    <GridItem>
-                        <h1>{blog.title}</h1>
+            <AuthContext.Consumer>
+                {
+                    (context) =>
                         <GridContainer>
-                            <GridItem xs={6} sm={6} md={6} style={{ marginTop: "8px" }} >
-                                <i>Posted by {blog.postedBy} on {blog.postedOn}  </i>
-                            </GridItem>
-                            <GridItem xs={6} sm={6} md={6} >
-                                {languages}
-                            </GridItem>
-                        </GridContainer>
-                        <Divider />
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            wordWrap: "break-word"
-                        }}>{this.state.detailDescription}</div>
+                            <GridItem>
+                                <Typography>
+                                    <h1>{blog.title}</h1>
+                                    <GridContainer>
+                                        <GridItem xs={10} sm={10} md={10} style={{ display: "flex", alignContent: "space-around" }}>
+                                            <PersonIcon /> <i style={{ paddingTop: "5px" }}>Posted by {blog.postedBy} on {blog.postedOn}  </i>
+                                        </GridItem>
+                                        <GridItem xs={1} sm={2} md={2} >
+                                            {/* {languages}  */}
+                                            <Button
+                                                variant="flat"
+                                                size="small"
+                                                color="primary"
+                                                // style={{ float: "right" }}
+                                                onClick={this.showHideArticle}>{this.state.buttonText}</Button>
+                                        </GridItem>
+                                        <GridItem xs={12} sm={12} md={12} >
+                                            <div dangerouslySetInnerHTML={{ __html: this.state.detailDescription }}></div>
+                                        </GridItem>
+                                        <GridItem xs={12} sm={12} md={12} >
+                                            <IconButton onClick={() => this.handleLike(context)}>
+                                                <Icon color="primary">thumb_up</Icon>
+                                            </IconButton>
+                                            <IconButton onClick={this.like}>
+                                                <Icon>thumb_down</Icon>
+                                            </IconButton>
+                                        </GridItem>
+                                    </GridContainer>
 
-                        {/* <Button variant="outlined" size="small" color="primary" >Previous</Button> */}
+                                    {/* <Button variant="outlined" size="small" color="primary" >Previous</Button> */}
 
-                        <Button
-                            variant="flat"
-                            size="small"
-                            color="primary"
-                            style={{ float: "right" }}
-                            onClick={this.showHideArticle}>{this.state.buttonText}</Button>
 
-                        {/* <IconButton onClick={this.like}>
+                                    {/* <IconButton onClick={this.like}>
                             <Icon color="primary">thumb_up</Icon>
                         </IconButton>
                         <IconButton onClick={this.like}>
                             <Icon color="primary">thumb_down</Icon>
                         </IconButton> */}
-                        {/* {comments}
+                                    {/* {comments}
                         <TextField
                             id="standard-full-width"
                             label="Comment"
@@ -123,9 +137,11 @@ class ShowBlog extends React.Component {
                                 shrink: true,
                             }}
                         /> */}
-                    </GridItem>
-                </GridContainer >
-            </Typography>
+                                </Typography >
+                            </GridItem>
+                        </GridContainer >
+                }
+            </AuthContext.Consumer>
         )
     }
 }

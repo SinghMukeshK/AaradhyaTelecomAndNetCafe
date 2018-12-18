@@ -67,8 +67,8 @@ class News extends Component {
             .catch(err => console.log(err))
     }
     componentDidMount() {
-        this.loadNews();
-        this.loadNewsSources();
+        //this.loadNews();
+        //this.loadNewsSources();
     }
     handleChange = (events, value) => {
         this.setState({

@@ -13,12 +13,14 @@ import Poppers from "@material-ui/core/Popper";
 import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
 import Dashboard from "@material-ui/icons/Dashboard";
-// import Search from "@material-ui/icons/Search";
+import Search from "@material-ui/icons/Search";
 // // core components
-// import CustomInput from "../../components/CustomInput/CustomInput.jsx";
+import CustomInput from "../../components/CustomInput/CustomInput.jsx";
 import Button from "../CustomButtons/Button.jsx";
 
 import headerLinksStyle from '../../assets/jss/components/headerLinksStyle.jsx';
+import LoginModal from '../../views/Login/Login';
+
 
 class HeaderLinks extends React.Component {
   state = {
@@ -28,6 +30,11 @@ class HeaderLinks extends React.Component {
     this.setState(state => ({ open: !state.open }));
   };
 
+  handleLogin = () => {
+    this.setState({
+      open: !this.state.open
+    })
+  }
   handleClose = event => {
     if (this.anchorEl.contains(event.target)) {
       return;
@@ -41,8 +48,8 @@ class HeaderLinks extends React.Component {
     const { open } = this.state;
     return (
       <div>
-        {/* <div className={classes.searchWrapper}>
-          <CustomInput
+        <div className={classes.searchWrapper}>
+          {/* <CustomInput
             formControlProps={{
               className: classes.margin + " " + classes.search
             }}
@@ -55,8 +62,8 @@ class HeaderLinks extends React.Component {
           />
           <Button color="white" aria-label="edit" justIcon round>
             <Search />
-          </Button>
-        </div> */}
+          </Button> */}
+        </div>
         {/* <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
@@ -82,7 +89,7 @@ class HeaderLinks extends React.Component {
             onClick={this.handleToggle}
             className={classes.buttonLink}
           > */}
-            {/* <Notifications className={classes.icons} />
+          {/* <Notifications className={classes.icons} />
             <span className={classes.notifications}>5</span>
             <Hidden mdUp implementation="css">
               <p onClick={this.handleClick} className={classes.linkText}>
@@ -132,52 +139,6 @@ class HeaderLinks extends React.Component {
                         >
                           You're now friend with Andrew
                       </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          Another Notification
-                      </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          Another One
-                      </MenuItem>
-                      </MenuList>
-                    </div>
-                    <div className={{ flexBasis: '33.33%' }}>
-                      <MenuList role="">
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          Mike John responded to your email
-                      </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          You have 5 new tasks
-                      </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          You're now friend with Andrew
-                      </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          Another Notification
-                      </MenuItem>
-                        <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                        >
-                          Another One
-                      </MenuItem>
                       </MenuList>
                     </div>
                   </ClickAwayListener>
@@ -186,18 +147,18 @@ class HeaderLinks extends React.Component {
             )}
           </Poppers> */}
         </div>
-        {/* <Button
+
+        <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
           aria-label="Person"
-          className={classes.buttonLink}
-        >
+        >Login
           <Person className={classes.icons} />
           <Hidden mdUp implementation="css">
             <p className={classes.linkText}>Profile</p>
           </Hidden>
-        </Button> */}
+        </Button>
       </div>
     );
   }

@@ -1,28 +1,27 @@
 import React from 'react';
 import Chip from '@material-ui/core/Chip';
 
+const categories = [
+    { key: 'Technology', label: 'Technology' },
+    { key: 'Education', label: 'Education' },
+    { key: 'Science', label: 'Science' },
+    { key: 'Bank', label: 'Bank' },
+    { key: 'Jobs', label: 'Jobs' }];
+
 const BlogCategories = ({ ...props }) => {
     const { handleCategoryClick } = props;
     return (
         <div>
-            <Chip
-                color="primary"
-                label="Technology"
-                onClick={() => handleCategoryClick('Technology')}
-                variant="outlined"
-            />
-            <Chip
-                color="primary"
-                label="Education"
-                onClick={() => handleCategoryClick('Education')}
-                variant="outlined"
-            />
-            <Chip
-                color="primary"
-                label="Science"
-                onClick={() => handleCategoryClick('Science')}
-                variant="outlined"
-            />
+            {categories.map((category) => {
+                return (<Chip
+                    style={{ margin: "2px" }}
+                    key={category.key}
+                    color="primary"
+                    label={category.label}
+                    onClick={() => handleCategoryClick(category.label)}
+                    variant="outlined"
+                />)
+            })}
         </div>
     )
 }

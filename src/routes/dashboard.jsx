@@ -16,6 +16,7 @@ import ContactUs from '../views/ContactUs/ContactUs.jsx';
 import Services from '../views/Services/Services.jsx';
 import News from '../views/Services/News.jsx';
 import Blogs from '../views/Blogs/Blogs.jsx';
+import NewArticle from '../views/Blogs/NewArticle.jsx';
 
 const dashboardRoutes = [
   {
@@ -23,7 +24,7 @@ const dashboardRoutes = [
     sidebarName: "Home",
     navbarName: "",
     icon: Notifications,
-    component: News
+    component: Home
   }, {
     path: "/services",
     sidebarName: "Services",
@@ -60,6 +61,13 @@ const dashboardRoutes = [
     navbarName: "",
     icon: Unarchive,
     component: News
+  },
+  {
+    path: "/newArticle",
+    sidebarName: "Add New Article",
+    navbarName: "",
+    icon: Unarchive,
+    component: NewArticle
   },
   {
     path: "/contactUs",

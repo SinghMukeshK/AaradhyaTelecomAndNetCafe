@@ -4,16 +4,21 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 import indexRoutes from "./routes/index.jsx";
-
+import LanguageProvider from './context/LanguageProvider'
+import AuthProvider from './context/AuthProvider';
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      {indexRoutes.map((prop, key) => {
-        return <Route path={prop.path} component={prop.component} key={key} />;
-      })}
-    </Switch>
-  </Router>,
+  <AuthProvider>
+    <Router history={hist}>
+      <Switch>
+        {
+          indexRoutes.map((prop, key) => {
+            return <Route path={prop.path} component={prop.component} key={key} />;
+          })
+        }
+      </Switch>
+    </Router>
+  </AuthProvider>,
   document.getElementById("root")
 );

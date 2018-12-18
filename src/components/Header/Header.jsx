@@ -1,80 +1,91 @@
-import React from 'react';
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import React, { Component } from 'react'
+import { NavLink } from "react-router-dom";
 
-// import { NavLink } from "react-router-dom";
-// import ListItem from "@material-ui/core/ListItem";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import ListItemText from "@material-ui/core/ListItemText";
-
-// @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Hidden from "@material-ui/core/Hidden";
-// import MenuItem from '@material-ui/core/MenuItem';
-// import Menu from '@material-ui/core/Menu';
-
-// @material-ui/icons
 import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button';
+import PersonIcon from '@material-ui/icons/Person';
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Icon from "@material-ui/core/Icon";
+import Modal from '@material-ui/core/Modal';
+import LoginModal from '../../views/Login/LoginModal';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Typography from '@material-ui/core/Typography';
 
-// core components
-import HeaderLinks from "./HeaderLinks.jsx";
-import Button from "../CustomButtons/Button.jsx";
 
+import routes from '../../routes/dashboard';
 import headerStyle from "../../assets/jss/components/headerStyle.jsx";
-//import Carrousel from '../../components/Carrousel/Carrousel.jsx';
+import GridContainer from '../../components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem';
+import AuthContext from '../../context/AuthContext';
 
-function Header({ ...props }) {
-  function makeBrand() {
-    var name;
-    props.routes.map((prop, key) => {
-      if (prop.path === props.location.pathname) {
-        name = prop.navbarName;
-      }
-      return null;
-    });
-    return name;
+
+
+export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      openDrawer: false
+    }
   }
-  const { classes, color } = props;
-  const appBarClasses = classNames({
-    [" " + classes[color]]: color
-  });
-  return (
-    <div>
-      <AppBar className={classes.appBar + appBarClasses}>
-        <Toolbar className={classes.container}>
-          {/* <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton> */}
-          <div className={classes.flex}>
-            {/* Here we create navbar brand, based on route name  */}
-            <Button color="transparent" href="#" className={classes.title}>
-              {makeBrand()}
-            </Button>
-          </div>
-          <Hidden smDown implementation="css">
-            <HeaderLinks />
-          </Hidden>
-          <Hidden mdUp implementation="css">
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={props.handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+
+  toggleDrawer = () => {
+    this.setState({
+      openDrawer: !this.state.openDrawer
+    })
+  }
+  openLoginModal = () => {
+    this.setState({
+      open: !this.state.open
+    })
+  }
+  render() {
+    let links = routes.map((prop, key) => {
+      return (
+        <NavLink to={prop.path} activeClassName="active" key={key} >
+          <ListItem button >
+            <ListItemText primary={prop.sidebarName} disableTypography={true} />
+          </ListItem>
+        </NavLink>
+      );
+    });
+    const drawer = <SwipeableDrawer open={this.state.openDrawer} onClose={this.toggleDrawer} style={{ width: "100px" }}>{links}</SwipeableDrawer>;
+
+
+    return (
+      <AuthContext.Consumer>
+        {(context) =>
+          <AppBar color="primary" style={{ display: "flex" }}>
+            <Toolbar style={{ minHeight: "50px" }}>
+              <IconButton onClick={this.toggleDrawer}>  <MenuIcon /> </IconButton>
+              <Typography variant="h6" color="inherit" noWrap>
+
+              </Typography>
+
+              {!context.isUserLoggedIn && <Button variant="flat" style={{ float: "right" }} onClick={this.openLoginModal} >
+                <PersonIcon />Login/Sign Up </Button>}
+
+              {context.isUserLoggedIn && <Button variant="outlined" style={{ float: "right" }}>
+                <PersonIcon />Profile </Button>}
+
+              {drawer}
+
+              <Modal open={this.state.open} onClose={this.openLoginModal} style={{ display: "flex", top: "10%", left: "35%", width: "30%", height: "60%" }}>
+                <LoginModal context={context} />
+              </Modal>
+
+            </Toolbar>
+          </AppBar>}
+      </AuthContext.Consumer>
+    )
+  }
 }
 
-Header.propTypes = {
-  classes: PropTypes.object.isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
-};
 
-export default withStyles(headerStyle)(Header);
+
