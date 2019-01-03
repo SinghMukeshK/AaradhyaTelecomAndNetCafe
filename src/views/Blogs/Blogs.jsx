@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Chip from '@material-ui/core/Chip';
 import Slide from '@material-ui/core/Slide';
 import Avatar from '@material-ui/core/Avatar';
@@ -19,6 +20,7 @@ import CardFooter from '../../components/Card/CardFooter';
 import GridContainer from '../../components/Grid/GridContainer';
 
 import BlogCategories from '../../views/Blogs/BlogCategories';
+import Button from '@material-ui/core/Button'
 
 export default class Blogs extends Component {
     constructor(props) {
@@ -62,7 +64,7 @@ export default class Blogs extends Component {
         if (this.state.totalArticles.length > 0) {
             articles = this.state.totalArticles.map((element, key) => {
                 return (
-                    <Card>
+                    <Card plain>
                         <CardBody>
                             <ShowBlog
                                 blog={element}
@@ -71,6 +73,9 @@ export default class Blogs extends Component {
                                 changeLanguage={this.changeLanguageHandler}
                             />
                         </CardBody>
+                        {/* <CardFooter>
+                            <Button variant="flat" component={Link} to={service.link}>View</Button>
+                        </CardFooter> */}
                     </Card>
                 )
             })
@@ -86,6 +91,9 @@ export default class Blogs extends Component {
                                 changeLanguage={this.changeLanguageHandler}
                             />
                         </CardBody>
+                        {/* <CardFooter>
+                            <Button variant="flat" component={Link} to={service.link}>View</Button>
+                        </CardFooter> */}
                     </Card>
                 )
             })
@@ -93,27 +101,28 @@ export default class Blogs extends Component {
         return (
             <Typography>
                 <GridContainer>
-                    
-                        {/* <GridItem xs={12} sm={12} md={9} style={{ marginTop: "15px" }}>
-                        <BlogCategories handleCategoryClick={this.handleCategoryClick} />
+
+                    {/* <GridItem xs={12} sm={12} md={9} style={{ marginTop: "15px" }}>
+                      <BlogCategories handleCategoryClick={this.handleCategoryClick} />
                     </GridItem> */}
-                        <GridItem xs={12} sm={12} md={9}>
-                            {articles}
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={3}>
-                            <Card>
-                                <CardHeader color="">Categories</CardHeader>
-                                <CardBody>
-                                    <BlogCategories handleCategoryClick={this.handleCategoryClick} />
-                                </CardBody>
-                                <CardFooter></CardFooter>
-                            </Card>
-                            <Card>
-                                <CardBody>Upcoming articles</CardBody>
-                                <CardFooter></CardFooter>
-                            </Card>
-                        </GridItem>
-                    
+                    <GridItem xs={12} sm={12} md={9}>
+                        {articles}
+                    </GridItem>
+                    <GridItem xs={12} sm={12} md={3}>
+                        <Card>
+                            <CardHeader color="primary">Categories</CardHeader>
+                            <CardBody>
+                                <BlogCategories handleCategoryClick={this.handleCategoryClick} />
+                            </CardBody>
+                            <CardFooter></CardFooter>
+                        </Card>
+                        <Card>
+                            <CardHeader color="rose">Upcoming articles</CardHeader>
+                            <CardBody></CardBody>
+                            <CardFooter></CardFooter>
+                        </Card>
+                    </GridItem>
+
                 </GridContainer>
             </Typography>
         )

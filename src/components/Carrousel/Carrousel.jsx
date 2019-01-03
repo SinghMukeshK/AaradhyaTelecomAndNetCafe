@@ -26,7 +26,7 @@ function Carrousel({ ...props }) {
                             background: `url(${banner_one})`,
                             height: `100px`
                         }}
-                    ></div>
+                    >sdfsdf</div>
                 </div>
                 <div>
                     <div
@@ -34,7 +34,7 @@ function Carrousel({ ...props }) {
                             background: `url(${banner_two})`,
                             height: `100px`
                         }}
-                    ></div>
+                    >sfsdf</div>
                 </div>
                 {/* <div>
                     <div

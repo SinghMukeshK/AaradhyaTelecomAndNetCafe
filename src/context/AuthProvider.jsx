@@ -19,8 +19,8 @@ class AuthProvider extends React.Component {
             user: userName
         })
     }
-    authorizeUser = (token) => {
-
+    authorizeUser = async (token) => {
+        
     }
     render() {
         return (

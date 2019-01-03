@@ -14,13 +14,14 @@ class LoginModal extends React.Component {
     render() {
         return (
             <Card>
-                <CardHeader color="warning">Login</CardHeader>
+                <CardHeader>Login</CardHeader>
                 <CardBody>
                     <GridContainer>
-                        {/* <GridItem xs={12} sm={12} md={6}></GridItem> */}
                         <GridItem xs={12} sm={12} md={12}>
                             <TextField id="standard-name" label="Username" placeholder="Enter your username" margin="dense" fullWidth />
                             <TextField id="standard-password-input" label="Password" type="password" autoComplete="current-password" margin="dense" fullWidth />
+                        </GridItem><br />
+                        <GridItem xs={12} sm={12} md={12}>
                             <Button variant="outlined" color="primary" fullWidth onClick={() => this.props.context.handleUserLogin('newname', 'password')}>Login </Button>
                         </GridItem>
                     </GridContainer>

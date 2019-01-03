@@ -92,16 +92,11 @@ class ShowBlog extends React.Component {
                                     <h1>{blog.title}</h1>
                                     <GridContainer>
                                         <GridItem xs={10} sm={10} md={10} style={{ display: "flex", alignContent: "space-around" }}>
-                                            <PersonIcon /> <i style={{ paddingTop: "5px" }}>Posted by {blog.postedBy} on {blog.postedOn}  </i>
+                                            <PersonIcon color="primary" /> <i style={{ paddingTop: "5px" }}>Posted by {blog.postedBy} on {blog.postedOn}  </i>
                                         </GridItem>
                                         <GridItem xs={1} sm={2} md={2} >
                                             {/* {languages}  */}
-                                            <Button
-                                                variant="flat"
-                                                size="small"
-                                                color="primary"
-                                                // style={{ float: "right" }}
-                                                onClick={this.showHideArticle}>{this.state.buttonText}</Button>
+
                                         </GridItem>
                                         <GridItem xs={12} sm={12} md={12} >
                                             <div dangerouslySetInnerHTML={{ __html: this.state.detailDescription }}></div>
@@ -113,6 +108,13 @@ class ShowBlog extends React.Component {
                                             <IconButton onClick={this.like}>
                                                 <Icon>thumb_down</Icon>
                                             </IconButton>
+                                            <Button
+                                                variant="flat"
+                                                size="small"
+                                                color="primary"
+                                                style={{ float: "right" }}
+                                                onClick={this.showHideArticle}>{this.state.buttonText}</Button>
+
                                         </GridItem>
                                     </GridContainer>
 

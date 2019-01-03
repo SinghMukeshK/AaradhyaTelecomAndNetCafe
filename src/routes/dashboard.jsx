@@ -17,6 +17,7 @@ import Services from '../views/Services/Services.jsx';
 import News from '../views/Services/News.jsx';
 import Blogs from '../views/Blogs/Blogs.jsx';
 import NewArticle from '../views/Blogs/NewArticle.jsx';
+import Forms from '../views/Services/Forms'
 
 const dashboardRoutes = [
   {
@@ -32,22 +33,21 @@ const dashboardRoutes = [
     icon: LibraryBooks,
     component: Services
   },
-  {
-    path: "/tickets",
-    sidebarName: "Tickets",
-    navbarName: "Tickets",
-    icon: BubbleChart,
-    component: Tickets
-  },
+  // {
+  //   path: "/tickets",
+  //   sidebarName: "Tickets",
+  //   navbarName: "Tickets",
+  //   icon: BubbleChart,
+  //   component: Tickets
+  // },
 
-  {
-    path: "/aboutUs",
-    sidebarName: "About Us",
-    navbarName: "About Us",
-    icon: Unarchive,
-    component: AboutUs
-  }
-  ,
+  // {
+  //   path: "/aboutUs",
+  //   sidebarName: "About Us",
+  //   navbarName: "About Us",
+  //   icon: Unarchive,
+  //   component: AboutUs
+  // },
   {
     path: "/blogs",
     sidebarName: "Blogs",
@@ -55,27 +55,35 @@ const dashboardRoutes = [
     icon: Unarchive,
     component: Blogs
   },
+  // {
+  //   path: "/news",
+  //   sidebarName: "News",
+  //   navbarName: "",
+  //   icon: Unarchive,
+  //   component: News
+  // },
+  // {
+  //   path: "/newArticle",
+  //   sidebarName: "Add New Article",
+  //   navbarName: "",
+  //   icon: Unarchive,
+  //   component: NewArticle
+  // },
   {
-    path: "/news",
-    sidebarName: "News",
+    path: "/forms",
+    sidebarName: "Latest Jobs",
     navbarName: "",
     icon: Unarchive,
-    component: News
+    component: Forms
   },
-  {
-    path: "/newArticle",
-    sidebarName: "Add New Article",
-    navbarName: "",
-    icon: Unarchive,
-    component: NewArticle
-  },
-  {
-    path: "/contactUs",
-    sidebarName: "Contact Us",
-    navbarName: "Contact Us",
-    icon: Notifications,
-    component: ContactUs
-  }, { redirect: true, path: "/", to: "/Home", navbarName: "Redirect" }
+  // {
+  //   path: "/contactUs",
+  //   sidebarName: "Contact Us",
+  //   navbarName: "Contact Us",
+  //   icon: Notifications,
+  //   component: ContactUs
+  // }, 
+  { redirect: true, path: "/", to: "/Home", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;

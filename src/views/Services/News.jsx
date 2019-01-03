@@ -28,6 +28,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
+import NewsContext from '../../context/NewsContext';
+
 function TabContainer(props) {
     return (
         <Typography component="div" style={{ padding: 8 * 3 }}>
@@ -135,7 +137,7 @@ class News extends Component {
         }
         return (
             <div>
-                {/* <AppBar position="static" color="transparent"> */}
+                
                 <Tabs
                     value={value}
                     onChange={this.handleChange}
@@ -147,7 +149,7 @@ class News extends Component {
                     <Tab value={1} label="News" />
                     <Tab value={0} label="News Sources" />
                 </Tabs>
-                {/* </AppBar>  */}
+                
                 {value === 0 && <TabContainer>
                     <GridContainer>
                         {newsSource}

@@ -2,7 +2,7 @@ let articles = [{
         "id": 1,
         "category": "Technology",
         "title": "Bank Exams: Important subjects to focus on!",
-        "description": `<i>The candidates preparing for the IBPS PO, Clerk, SO, SBI POzxczxcxzcxzczxc xczxcxcz zsccszfsadf sdfdsfsdfsdf sdfsdf sdfdsfdvx dfdsffsdfdfsdf</i>`,
+        "description": `<i>The candidates preparing for the IBPS PO, Clerk, SO, SBI PO Prelims and Mains, RRB, RBI and other banking job related recruitment exams should know </i>`,
         "detailDescription": `<div class="Normal">The candidates preparing for the 
                                     PO, Clerk, SO, SBI PO/Clerk Prelims and Mains, RRB, RBI and other banking job related recruitment exams should know
                                     about the latest subject wise study material to secure better ranking in the examination.

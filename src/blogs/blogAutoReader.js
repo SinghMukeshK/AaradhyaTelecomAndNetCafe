@@ -6,3 +6,17 @@ function fetchBlogs(category, readingCallback, completionCallback) {
 }
 
 module.exports = fetchBlogs;
+
+
+const userSettings = {
+    showProfile: {
+        type: Boolean,
+        text:"Make your profile visible",
+        value:true
+    },
+    subscribe: {
+        type: Boolean,
+        text: "Subscribe for the latest articles",
+        value: true
+    }
+}

@@ -10,6 +10,10 @@ import CardHeader from '../../components/Card/CardHeader.jsx'
 import CardFooter from '../../components/Card/CardFooter.jsx'
 import CardBody from '../../components/Card/CardBody.jsx'
 import Blogs from '../../views/Blogs/Blogs';
+import Carrousel from '../../components/Carrousel/Carrousel.jsx';
+import Slider from 'react-slick';
+
+import HomeHeader from './HomeHeader'
 
 export default class Home extends Component {
     constructor(props) {
@@ -19,51 +23,31 @@ export default class Home extends Component {
         }
         this.onSlideEntered = this.onSlideEntered.bind(this);
     }
+
     onSlideEntered() {
         this.setState({
             welcomeMessage: 'Hello.. I am here now!'
         })
-        console.log(this.state.welcomeMessage)
     }
+
     render() {
+        // setInterval(async () => {
+        //     await this.setState({
+        //         welcomeMessage: `${Math.random()}`
+        //     })
+        // }, 3000);
+
+        const settings = {
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            speed: 500
+        }
         return (
-            <div style={{
-                backgroundColor: ""
-            }}>
-                <GridContainer>
-                    <Slide direction="up" in={true} mountOnEnter unmountOnExit onEntered={() => this.onSlideEntered} >
-                        <GridItem xs={12} sm={12} md={12} style={{ marginTop: "10px" }}>
-                            <Blogs />
-                        </GridItem>
-                    </Slide>
-                </GridContainer>
-
-                <Zoom in={true}>
-                    <GridContainer>
-                        <GridItem xs={12} sm={6} md={6}>
-                            <Card>
-                                <CardHeader color="warning">This is card header</CardHeader>
-                                <CardBody>
-
-                                </CardBody>
-                                <CardFooter>
-
-                                </CardFooter>
-                            </Card>
-                        </GridItem>
-                        <GridItem xs={12} sm={6} md={6}>
-                            <Card>
-                                <CardHeader color="warning">This is card header</CardHeader>
-                                <CardBody>
-
-                                </CardBody>
-                                <CardFooter>
-
-                                </CardFooter>
-                            </Card>
-                        </GridItem>
-                    </GridContainer>
-                </Zoom>
+            <div>
+                <HomeHeader />
+                {/* <h1>Top Reads</h1> */}
+                <Blogs />
             </div>
         )
     }
