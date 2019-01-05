@@ -5,7 +5,9 @@ import Button from '@material-ui/core/Button';
 import HomeHeaderImage from '../../assets/img/homeHeader.jpg';
 import ContactUd from '../../views/ContactUs/ContactUs';
 import services from '../../data/services.json';
-import Typography from '@material-ui/core/Typography'
+import Typography from '@material-ui/core/Typography';
+
+import Chip from '@material-ui/core/Chip';
 
 import Slider from 'react-slick'
 import Card from '../../components/Card/Card'
@@ -15,6 +17,7 @@ import CardFooter from '../../components/Card/CardFooter';
 import GridContainer from '../../components/Grid/GridContainer'
 import GridItem from '../../components/Grid/GridItem'
 import Blogs from '../../views/Blogs/Blogs'
+import Slide from '@material-ui/core/Slide'
 
 export default class HomeHeader extends Component {
     render() {
@@ -28,27 +31,29 @@ export default class HomeHeader extends Component {
         if (services) {
             console.log(services)
             servicesCard = services.map(service => {
-                return (<GridItem xs={12} sm={6} md={3}>
-                    <Card primary>
-                        <CardHeader color="secondary">{service.title}</CardHeader>
-                        <CardBody>{service.description}</CardBody>
-                        <CardFooter>
-                            <Button variant="outlined" component={Link} to={service.link}>View</Button>
-                        </CardFooter>
-                    </Card>
-                </GridItem>)
+                return (
+                    <Button component={Link} to={service.link} variant="outlined" color="primary" style={{ margin: "2px" }}>{service.title}</Button>
+                    // <Chip
+                    //     style={{ marginTop: "3px" }}
+                    //     key={service.id}
+                    //     color="primasecondaryry"
+                    //     label={service.title}
+                    //     onClick={() => alert('You selected', service.title)}
+                    //     variant="outlined"
+                    // />
+                )
             });
         }
         return (
             <div>
                 <Typography>
-                    <h1>Our Services</h1>
                     <GridContainer>
-                        {servicesCard}
-                    </GridContainer>
 
+                        <GridItem xs={12} sm={12} md={12}>{servicesCard}</GridItem>
+
+                    </GridContainer>
                 </Typography>
-            </div>
+            </div >
         )
     }
 }

@@ -42,7 +42,7 @@ class Tickets extends Component {
             <Slide direction="up" in={this.state.checked} mountOnEnter unmountOnExit>
                 <div>
                     <h2>Information <p id="reader"></p></h2>
-                    <User />
+
                     {route}
                 </div>
             </Slide>

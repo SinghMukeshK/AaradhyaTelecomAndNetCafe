@@ -1,18 +1,43 @@
 [{
+        "id": "Rail",
         "title": "Rail Reservation",
         "description": "Its easy and convinient now to get rail tickets",
-        "link": "/forms"
+        "link": "/tickets"
     },
     {
+        "id": "AirTicket",
         "title": "Air Ticket",
         "description": "Its easy and convinient now to get rail tickets",
         "link": "/forms"
     }, {
+        "id": "Moneyransfer",
         "title": "Money Transfer",
         "description": "Its easy and convinient now to get rail tickets",
         "link": "/forms"
-    }, {
+    },
+    {
+        "id": "Forms",
         "title": "Forms",
+        "description": "Check what's new in forms",
+        "link": "/forms"
+    }, {
+        "id": "Blogs",
+        "title": "Blogs",
+        "description": "Check what's new in forms",
+        "link": "/blogs"
+    }, {
+        "id": "Jobs",
+        "title": "Latest Jobs",
+        "description": "Check what's new in forms",
+        "link": "/forms"
+    }, {
+        "id": "Results",
+        "title": "Results",
+        "description": "Check what's new in forms",
+        "link": "/forms"
+    }, {
+        "id": "AdmitCard",
+        "title": "Admit Card",
         "description": "Check what's new in forms",
         "link": "/forms"
     }

@@ -23,23 +23,18 @@ class FormDetail extends Component {
     render() {
         const { job } = this.props;
         return (<div>
-            <Card plain>
+            <Card>
                 <CardHeader>
                     <GridContainer>
                         <GridItem md={10}><h2>{job.title}</h2></GridItem>
-                        <GridItem md={1}><IconButton color="primary"><Icon>alarm_add</Icon></IconButton></GridItem>
-                        <GridItem md={1}><IconButton color="primary"><Icon>star</Icon></IconButton></GridItem>
+                        <GridItem md={2}>
+                            <IconButton color="primary"><Icon>alarm_add</Icon></IconButton>
+                            <IconButton color="primary"><Icon>star</Icon></IconButton>
+                        </GridItem>
+                        <GridItem md={12}> {this.props.job.description}</GridItem>
                     </GridContainer>
                 </CardHeader>
                 <CardBody>
-                    <GridContainer>
-                        <GridItem md={2}> Title</GridItem>
-                        <GridItem md={10}> {this.props.job.title}</GridItem>
-                    </GridContainer>
-                    <GridContainer>
-                        <GridItem md={2}> Detail</GridItem>
-                        <GridItem md={10}> {this.props.job.description}</GridItem>
-                    </GridContainer>
                     <GridContainer>
                         <GridItem md={2}> Posted Date</GridItem>
                         <GridItem md={10}> {this.props.job.postedDate}</GridItem>

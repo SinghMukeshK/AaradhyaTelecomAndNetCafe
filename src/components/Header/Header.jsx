@@ -104,11 +104,11 @@ export default class Header extends Component {
                   <IconButton onClick={this.toggleDrawer}>  <MenuIcon /> </IconButton>
                 </Grid>
                 {/* <Grid direction="column" spacing={0}>Aaradhya Telecom</Grid> */}
-                <Grid direction="column" >
+                {/* <Grid direction="column" >
                   {!context.isUserLoggedIn && <Button variant="flat" onClick={this.openLoginModal}> <PersonIcon />Login/Sign Up </Button>}
 
                   {context.isUserLoggedIn && <Button variant="flat" ><PersonIcon />Profile </Button>}
-                </Grid>
+                </Grid> */}
                 {drawer}
                 <Modal open={this.state.open} onClose={this.openLoginModal} style={{ display: "flex", top: "10%", left: "35%", width: "30%", height: "60%" }}>
                   <LoginModal context={context} />

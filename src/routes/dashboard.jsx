@@ -18,6 +18,7 @@ import News from '../views/Services/News.jsx';
 import Blogs from '../views/Blogs/Blogs.jsx';
 import NewArticle from '../views/Blogs/NewArticle.jsx';
 import Forms from '../views/Services/Forms'
+import AddNewJob from '../views/Services/AddNewJob';
 
 const dashboardRoutes = [
   {
@@ -33,21 +34,21 @@ const dashboardRoutes = [
     icon: LibraryBooks,
     component: Services
   },
-  // {
-  //   path: "/tickets",
-  //   sidebarName: "Tickets",
-  //   navbarName: "Tickets",
-  //   icon: BubbleChart,
-  //   component: Tickets
-  // },
+  {
+    path: "/tickets",
+    sidebarName: "Tickets",
+    navbarName: "Tickets",
+    icon: BubbleChart,
+    component: Tickets
+  },
 
-  // {
-  //   path: "/aboutUs",
-  //   sidebarName: "About Us",
-  //   navbarName: "About Us",
-  //   icon: Unarchive,
-  //   component: AboutUs
-  // },
+  {
+    path: "/newJob",
+    sidebarName: "Add New Job",
+    navbarName: "Add New Job",
+    icon: Unarchive,
+    component: AddNewJob
+  },
   {
     path: "/blogs",
     sidebarName: "Blogs",
