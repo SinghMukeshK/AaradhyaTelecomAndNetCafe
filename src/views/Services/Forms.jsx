@@ -17,6 +17,7 @@ import FormDetail from './FormsDetail';
 import AddNewJob from './AddNewJob';
 import { TextField } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider'
+import Reveal from '../../components/Reveal/Reveal';
 
 class Forms extends Component {
     constructor(props) {
