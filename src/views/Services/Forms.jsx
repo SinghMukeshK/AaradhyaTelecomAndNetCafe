@@ -7,6 +7,7 @@ import GridContainer from '../../components/Grid/GridContainer'
 import GridItem from '../../components/Grid/GridItem'
 
 import FormDetail from './FormsDetail';
+import Reveal from '../../components/Reveal/Reveal';
 
 class Forms extends Component {
     constructor(props) {

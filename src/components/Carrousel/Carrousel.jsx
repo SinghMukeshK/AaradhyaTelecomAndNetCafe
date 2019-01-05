@@ -7,7 +7,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import carrouselStyle from '../../assets/jss/components/carrouselStyle.jsx';
 import banner_two from '../../assets/img/banner-2.jpg';
 import banner_one from '../../assets/img/banner-1.jpg';
-import banner_three from '../../assets/img/cover.jpeg';
 
 function Carrousel({ ...props }) {
     const settings = {
@@ -26,7 +25,7 @@ function Carrousel({ ...props }) {
                             background: `url(${banner_one})`,
                             height: `100px`
                         }}
-                    >sdfsdf</div>
+                    ></div>
                 </div>
                 <div>
                     <div
@@ -34,16 +33,8 @@ function Carrousel({ ...props }) {
                             background: `url(${banner_two})`,
                             height: `100px`
                         }}
-                    >sfsdf</div>
-                </div>
-                {/* <div>
-                    <div
-                        style={{
-                            background: `url(${banner_three})`,
-                            height: `${window.innerHeight}px`
-                        }}
                     ></div>
-                </div> */}
+                </div>
             </Slider>
             {children}
         </div>

@@ -6,8 +6,8 @@ const carrouselStyle = {
       position: "relative"
     },
     carrouselWrapper: {
-      overflow: 'hidden',
-      height:'100px'
+      overflow: 'hidden'
+    
   }
   };
   
