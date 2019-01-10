@@ -3,7 +3,7 @@ import NewsContext from './NewsContext';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-
+//const NewsContext = React.createContext();
 class NewsProvider extends React.Component {
     state = {
         value: 1,
@@ -15,7 +15,8 @@ class NewsProvider extends React.Component {
         axios.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=50&apiKey=69a9c2d337d4411f92c3b2ad26cc3103')
             .then(response => {
                 this.setState({
-                    news: response.data.articles
+                    news: response.data.articles,
+                    isloading: false
                 })
             })
             .catch(err => console.log(err))
@@ -32,7 +33,7 @@ class NewsProvider extends React.Component {
     }
     componentDidMount() {
         this.loadNews();
-       // this.loadNewsSources();
+        // this.loadNewsSources();
     }
     render() {
         return (

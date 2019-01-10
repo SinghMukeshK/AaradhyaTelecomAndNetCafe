@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+
+
+import path from 'path';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
+
+import CurrentOpeneing from '../../data/currentOpenings.json';
 
 export default class AddNewJob extends Component {
     constructor(props) {
@@ -61,6 +66,8 @@ export default class AddNewJob extends Component {
     }
     hanldeSave = () => {
         console.log(this.state)
+    }
+    componentDidMount() {
     }
     render() {
         return (

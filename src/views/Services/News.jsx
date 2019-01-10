@@ -39,35 +39,26 @@ function TabContainer(props) {
 }
 
 class News extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: 1,
-            isloading: true,
-            news: [],
-            sources: []
-        }
-    }
-    loadNews() {
-        axios.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=50&apiKey=69a9c2d337d4411f92c3b2ad26cc3103')
-            .then(response => {
-                this.setState({
-                    news: response.data.articles
-                })
-            })
-            .catch(err => console.log(err))
-    }
-    loadNewsSources() {
-        axios.get('https://newsapi.org/v2/sources?apiKey=69a9c2d337d4411f92c3b2ad26cc3103')
-            .then(response => {
-                console.log(response)
-                this.setState({
-                    sources: response.data.sources,
-                    isloading: false
-                })
-            })
-            .catch(err => console.log(err))
-    }
+    // loadNews() {
+    //     axios.get('https://newsapi.org/v2/top-headlines?country=in&pageSize=50&apiKey=69a9c2d337d4411f92c3b2ad26cc3103')
+    //         .then(response => {
+    //             this.setState({
+    //                 news: response.data.articles
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+    // loadNewsSources() {
+    //     axios.get('https://newsapi.org/v2/sources?apiKey=69a9c2d337d4411f92c3b2ad26cc3103')
+    //         .then(response => {
+    //             console.log(response)
+    //             this.setState({
+    //                 sources: response.data.sources,
+    //                 isloading: false
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
+    // }
     componentDidMount() {
         //this.loadNews();
         //this.loadNewsSources();
@@ -77,7 +68,14 @@ class News extends Component {
             value: value
         })
     }
-    render() {
+    render(props) {
+        console.log(this.props)
+        this.state = {
+            value: 1,
+            isloading: true,
+            news: this.props.data.news,
+            sources: []
+        }
         let newsSource, _news;
         const { sources, isLoading, value, news } = this.state;
         if (sources && !isLoading) {
@@ -137,7 +135,7 @@ class News extends Component {
         }
         return (
             <div>
-                
+
                 <Tabs
                     value={value}
                     onChange={this.handleChange}
@@ -149,7 +147,7 @@ class News extends Component {
                     <Tab value={1} label="News" />
                     <Tab value={0} label="News Sources" />
                 </Tabs>
-                
+
                 {value === 0 && <TabContainer>
                     <GridContainer>
                         {newsSource}

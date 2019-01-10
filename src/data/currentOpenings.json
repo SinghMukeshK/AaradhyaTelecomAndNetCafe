@@ -1,56 +1,528 @@
 [{
         "id": "1",
-        "title": "Delhi HC JJA Technical Online Form"
-
+        "title": "Delhi HC JJA Technical Online Form",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [{
+                "postname": "",
+                "totalPost": ""
+            }],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     }, {
         "id": "2",
-        "title": "Haryana HSSC Various Instructor Post Online Form 2019"
+        "title": "Haryana HSSC Various Instructor Post Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [{
+                "postname": "",
+                "totalPost": ""
+            }],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
 
     }, {
         "id": "3",
-        "title": "JSSC Spl. Constable Online Form"
+        "title": "JSSC Spl. Constable Online Form",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [{
+                "postname": "",
+                "totalPost": ""
+            }],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
 
     }, {
         "id": "4",
-        "title": "Bihar Forest Guard Online Form 2019"
+        "title": "Bihar Forest Guard Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [{
+                "postname": "",
+                "totalPost": ""
+            }],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
 
     }, {
         "id": "5",
-        "title": "Railway RRB JE Online Form 2019"
+        "title": "Railway RRB JE Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
 
     },
 
     {
         "id": "6",
-        "title": "Indian Airforce X, Y Group Online Form 2019"
+        "title": "Indian Airforce X, Y Group Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "7",
-        "title": "RPF Constable Ancillary Online Form 2018"
+        "title": "RPF Constable Ancillary Online Form 2018",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "8",
-        "title": "RRC NR Apprentice Online Form"
+        "title": "RRC NR Apprentice Online Form",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "9",
-        "title": "HSSC Instructor Practical Online Form 2019"
+        "title": "HSSC Instructor Practical Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "10",
-        "title": "UPSSSC Mandi Parishad Driver, Draftsman Online Form 2019"
+        "title": "UPSSSC Mandi Parishad Driver, Draftsman Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "11",
-        "title": "UPPSC APO Online Form 2019"
+        "title": "UPPSC APO Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "12",
-        "title": "Railway WCR Bhopal Apprentice Online Form 2019"
+        "title": "Railway WCR Bhopal Apprentice Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": "13",
-        "title": "Railway WCR Kota Apprentice Online Form 2019"
+        "title": "Railway WCR Kota Apprentice Online Form 2019",
+        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "postedDate": "07 January 2017",
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     },
     {
         "id": 14,
@@ -58,15 +530,76 @@
         "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
         "postedDate": "07 January 2017",
         "postUdatedDate": "01 March 2018",
-        "Fees": {},
-        "Dates": {
-            "ApplicationBegin": "15/09/2018"
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "1234",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [{
+                "postname": "",
+                "totalPost": ""
+            }],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
         }
     }, {
         "id": 15,
-        "title": "Bank PO",
-        "description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
+        "title": "Bank PO","description": "Security and Exchange Board of India SEBI Are Invited to Online Application Form for the Post of Assistant Manager General, Law, Civil, Electrical and Other Post Those Candidates Are Interested to the Following Recruitment and Completed the All Education and Eligibility Criteria and Experience Can Read the Full Notification and Apply Online ",
         "postedDate": "07 January 2017",
-        "postUdatedDate": "01 March 2018"
+        "postUdatedDate": "01 March 2018",
+        "applicationFee": {
+            "generalobc": "",
+            "scst": "",
+            "handicap": "",
+            "paymentMode": ""
+        },
+        "importantDates": {
+            "notificationIssuedDate": "15/09/2018",
+            "applicationBeginDate": "15/09/2018",
+            "lastDateToApplyOnline": "15/09/2018",
+            "lastDateToPayExamFee": "15/09/2018",
+            "onlineCorrection": "15/09/2018",
+            "examDate": "15/09/2018",
+            "admitCardIssueDate": "15/09/2018"
+        },
+        "vacancyDetail": {
+            "totalPost": "",
+            "postName": "",
+            "ageLimit": "",
+            "eligibility": "",
+            "postWiseVacancyDetails": [
+                {
+                    "postname": "",
+                    "totalPost": ""
+                }
+            ],
+            "physicalEligibility": "",
+            "selectionProcess": ""
+        },
+        "links": {
+            "applyOnline": "",
+            "downloadNotification": "",
+            "officialWebsite": ""
+        }
     }
 ]

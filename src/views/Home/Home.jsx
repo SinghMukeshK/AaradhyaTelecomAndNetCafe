@@ -14,6 +14,9 @@ import Carrousel from '../../components/Carrousel/Carrousel.jsx';
 import Slider from 'react-slick';
 
 import HomeHeader from './HomeHeader'
+import News from '../../views/Services/News';
+
+import NewsContext from '../../context/NewsContext';
 
 export default class Home extends Component {
     constructor(props) {
@@ -44,11 +47,15 @@ export default class Home extends Component {
             speed: 500
         }
         return (
-            <div>
-                <HomeHeader />
-                {/* <h1>Top Reads</h1> */}
-                <Blogs />
-            </div>
+            <NewsContext.Consumer>
+                {news => (
+                    <div>
+                        <HomeHeader />
+                        <Blogs />
+                        <News data={news} />
+                    </div>
+                )}
+            </NewsContext.Consumer>
         )
     }
 }

@@ -22,6 +22,7 @@ import TableRow from '@material-ui/core/TableRow';
 class FormDetail extends Component {
     render() {
         const { job } = this.props;
+        
         return (<div>
             <Card>
                 <CardHeader>
@@ -36,14 +37,67 @@ class FormDetail extends Component {
                 </CardHeader>
                 <CardBody>
                     <GridContainer>
-                        <GridItem md={2}> Posted Date</GridItem>
-                        <GridItem md={10}> {this.props.job.postedDate}</GridItem>
+                        <Card plain>
+                            <CardHeader color="rose">Important Dates</CardHeader>
+                            <CardBody>
+                                <GridContainer>
+                                    <GridItem md={3}> Posted Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postedDate}</GridItem>
+                                    <GridItem md={3}> Updated Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
+                                </GridContainer>
+                                <GridContainer>
+                                    <GridItem md={3}> Notification issued Date</GridItem>
+                                    {/* <GridItem md={3}> {this.props.job.importantDates.applicationBeginDate}</GridItem> */}
+                                    <GridItem md={3}> Application begin Date</GridItem>
+                                    {/* <GridItem md={3}> {this.props.job.importantDates.applicationBeginDate}</GridItem> */}
+                                </GridContainer>
+                                <GridContainer>
+                                    <GridItem md={3}> Posted Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postedDate}</GridItem>
+                                    <GridItem md={3}> Updated Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
+                                </GridContainer>
+                            </CardBody>
+                        </Card>
                     </GridContainer>
                     <GridContainer>
-                        <GridItem md={2}> Updated Date</GridItem>
-                        <GridItem md={10}> {this.props.job.postUdatedDate}</GridItem>
+                        <Card plain>
+                            <CardHeader color="rose">Application Fees</CardHeader>
+                            <CardBody>
+                                <GridContainer>
+                                    <GridItem md={3}> General /OBC</GridItem>
+                                    {/* <GridItem md={3}> {this.props.job}</GridItem> */}
+                                    <GridItem md={3}> SC/ST</GridItem>
+                                    <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
+                                </GridContainer>
+                                <GridContainer>
+                                    <GridItem md={3}> Eligibility</GridItem>
+                                    <GridItem md={12}> {this.props.job.postedDate}</GridItem>
+                                </GridContainer>
+                            </CardBody>
+                        </Card>
                     </GridContainer>
                     <GridContainer>
+                        <Card plain>
+                            <CardHeader color="rose">Vacancy Detail</CardHeader>
+                            <CardBody>
+                                <GridContainer>
+                                    <GridItem md={3}> Total Posts</GridItem>
+                                    {/* <GridItem md={3}> {this.props.job}</GridItem> */}
+                                    <GridItem md={3}> Updated Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
+                                </GridContainer>
+                                <GridContainer>
+                                    <GridItem md={3}> Posted Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postedDate}</GridItem>
+                                    <GridItem md={3}> Updated Date</GridItem>
+                                    <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
+                                </GridContainer>
+                            </CardBody>
+                        </Card>
+                    </GridContainer>
+                    {/* <GridContainer>
                         <Table>
                             <TableHead>
                                 <TableRow>
@@ -70,7 +124,7 @@ class FormDetail extends Component {
                                 </TableRow>
                             </TableBody>
                         </Table>
-                    </GridContainer>
+                    </GridContainer> */}
                 </CardBody>
                 <CardFooter>
                     <Button variant="outlined" color="primary">Apply Now</Button>
