@@ -8,7 +8,6 @@ import Card from '../../components/Card/Card'
 import CardBody from '../../components/Card/CardBody';
 import CardHeader from '../../components/Card/CardHeader';
 import CardFooter from '../../components/Card/CardFooter';
-import currentOpenings from '../../data/currentOpenings.json';
 import GridContainer from '../../components/Grid/GridContainer'
 import GridItem from '../../components/Grid/GridItem';
 import HomeHeader from '../../views/Home/HomeHeader';
@@ -19,6 +18,10 @@ import { TextField } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider'
 import Reveal from '../../components/Reveal/Reveal';
 
+import vacancyService from '../../service/VacancyService';
+
+//import currentOpenings from '../../data/currentOpenings.json';
+let currentOpenings;
 class Forms extends Component {
     constructor(props) {
         super(props);
@@ -42,53 +45,62 @@ class Forms extends Component {
             jobs: _jobs
         })
     }
-    componentDidMount() {
+
+    async componentDidMount() {
+        let data = await vacancyService.getVacancies();//.then(data => {
+        console.log(data)
+        currentOpenings = data.data;
         this.setState({
             jobs: currentOpenings,
             job: currentOpenings[0]
         })
     }
+
     render() {
         let jobs;
-        jobs = this.state.jobs.map(job => {
-            return <p color="primary" style={{ cursor: "pointer" }} onClick={() => this.handleSelectedPost(job)}><strong>{job.title}</strong><Divider /></p>
-        })
-        return (
-            <Typography>
-                <GridContainer>
-                    <Slide direction="up" in={this.state.checked} mountOnEnter unmountOnExit>
-                        <GridItem xs={12} sm={8} md={9} >
-                            {/* <HomeHeader /> */}
-                            <FormDetail job={this.state.job} />
-                        </GridItem>
-                    </Slide>
-                    <Slide direction="left" in={this.state.checked} mountOnEnter unmountOnExit>
-                        <GridItem xs={12} sm={4} md={3} style={{ height: `${window.innerHeight - 100}px`, overflowY: "scroll" }}>
-                            <Card plain>
-                                <CardHeader><Chip
-                                    key="LatestVacencies"
-                                    color="primary"
-                                    label="Latest Vacencies"
-                                    variant="default"
+        console.log(this.state)
+        if (this.state.jobs) {
+            jobs = this.state.jobs.map(job => {
+                return <p color="primary" style={{ cursor: "pointer" }} onClick={() => this.handleSelectedPost(job)}><strong>{job.title}</strong><Divider /></p>
+            })
+            return (
+                <Typography>
+                    <GridContainer>
+                        <Slide direction="up" in={this.state.checked} mountOnEnter unmountOnExit>
+                            <GridItem xs={12} sm={8} md={9} >
+                                <TextField
+                                    id="searchVacency"
+                                    label="Search"
+                                    placeholder="Enter any post"
+                                    margin="dense"
                                     fullWidth
-                                /></CardHeader>
-                                <CardBody>
-                                    <TextField
-                                        id="searchVacency"
-                                        label="Search"
-                                        placeholder="Enter any post"
-                                        margin="dense"
+                                    onChange={(e) => this.handleSearch(e)}
+                                />
+                                {/* <HomeHeader /> */}
+                                <FormDetail job={this.state.job} />
+                            </GridItem>
+                        </Slide>
+                        <Slide direction="left" in={this.state.checked} mountOnEnter unmountOnExit>
+                            <GridItem xs={12} sm={4} md={3} style={{ height: `${window.innerHeight - 100}px`, overflowY: "scroll" }}>
+                                <Card plain>
+                                    {/* <CardHeader><Chip
+                                        key="LatestVacencies"
+                                        color="primary"
+                                        label="Latest Vacencies"
+                                        variant="default"
                                         fullWidth
-                                        onChange={(e) => this.handleSearch(e)}
-                                    />
-                                    {jobs}
-                                </CardBody>
-                            </Card>
-                        </GridItem>
-                    </Slide>
-                </GridContainer>
-            </Typography >
-        )
+                                    /></CardHeader> */}
+                                    <CardBody>
+
+                                        {jobs}
+                                    </CardBody>
+                                </Card>
+                            </GridItem>
+                        </Slide>
+                    </GridContainer>
+                </Typography >
+            )
+        }
     }
 }
 

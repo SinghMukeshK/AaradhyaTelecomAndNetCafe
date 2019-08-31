@@ -21,8 +21,10 @@ import TableRow from '@material-ui/core/TableRow';
 
 class FormDetail extends Component {
     render() {
-        const { job } = this.props;
-        
+
+        let { job } = this.props;
+        job = JSON.parse(JSON.stringify(job))
+        console.log(job)
         return (<div>
             <Card>
                 <CardHeader>
@@ -48,7 +50,7 @@ class FormDetail extends Component {
                                 </GridContainer>
                                 <GridContainer>
                                     <GridItem md={3}> Notification issued Date</GridItem>
-                                    {/* <GridItem md={3}> {this.props.job.importantDates.applicationBeginDate}</GridItem> */}
+                                    {/*      */}
                                     <GridItem md={3}> Application begin Date</GridItem>
                                     {/* <GridItem md={3}> {this.props.job.importantDates.applicationBeginDate}</GridItem> */}
                                 </GridContainer>
@@ -67,7 +69,7 @@ class FormDetail extends Component {
                             <CardBody>
                                 <GridContainer>
                                     <GridItem md={3}> General /OBC</GridItem>
-                                    {/* <GridItem md={3}> {this.props.job}</GridItem> */}
+                                    {/* <GridItem md={3}> {this.props.job.applicationFee.general}</GridItem> */}
                                     <GridItem md={3}> SC/ST</GridItem>
                                     <GridItem md={3}> {this.props.job.postUdatedDate}</GridItem>
                                 </GridContainer>
